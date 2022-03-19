@@ -114,7 +114,7 @@ export default function Auth() {
             <div className="flex items-center justify-center">
               <div className="text-sm">
                 <span href="#" className="cursor-pointer font-medium text-white hover:text-indigo-500" onClick={() => setIsLogin(!isLogin)}>
-                  change mode?
+                  change mode ?
                 </span>
               </div>
             </div>
