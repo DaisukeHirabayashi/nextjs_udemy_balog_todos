@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function TaskPage({ filteredPosts }) {
   return (
     <Layout title="Task page">
-      <Link passHref="/main-page">
+      <Link href="/main-page" passHref>
         <div className="flex cursor-pointer mt-12">
           <svg
             className="w-6 h-6 mr-3"
