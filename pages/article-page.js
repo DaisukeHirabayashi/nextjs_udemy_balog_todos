@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 
-export default function BlogPage({ filteredPosts }) {
+export default function ArticlePage() {
   return (
     <Layout title="Blog page">
       <Link href="/main-page" passHref>

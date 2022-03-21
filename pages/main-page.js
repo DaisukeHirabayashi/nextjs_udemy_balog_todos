@@ -14,7 +14,7 @@ export default function MainPage() {
   return (
     <Layout title="Main page">
       <div className="mb-10">
-        <Link href="/blog-page">
+        <Link href="/article-page">
           <a className="bg-indigo-500 mr-8  hover:bg-indigo-600 text-white px-4 py-12 rounded">
             Visit Blog by SSG + ISR
           </a>
