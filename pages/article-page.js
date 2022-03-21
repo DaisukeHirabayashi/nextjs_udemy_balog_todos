@@ -35,7 +35,6 @@ export default function ArticlePage( { filteredArticles } ) {
 
 export async function getStaticProps() {
   const filteredArticles = await getAllArticles();
-  console.log('aaa')
   return {
     props: { filteredArticles },
   };
