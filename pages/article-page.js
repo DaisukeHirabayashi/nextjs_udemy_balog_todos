@@ -1,9 +1,15 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
+import { getAllArticles } from "../lib/articles";
+import Article from "../components/Article";
 
-export default function ArticlePage() {
+export default function ArticlePage( { filteredArticles } ) {
   return (
     <Layout title="Blog page">
+      <ul>
+        {filteredArticles &&
+          filteredArticles.map((article) => <Article key={article.id} article={article} />)}
+      </ul>
       <Link href="/main-page" passHref>
         <div className="flex cursor-pointer mt-12">
           <svg
@@ -25,4 +31,12 @@ export default function ArticlePage() {
       </Link>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const filteredArticles = await getAllArticles();
+  console.log('aaa')
+  return {
+    props: { filteredArticles },
+  };
 }
